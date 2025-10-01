@@ -52,11 +52,5 @@ SELECT * FROM Automatizacion;
 SELECT * FROM Usuario;
 SELECT * FROM Rol;
 
-DROP TABLE Usuario
-
-
-SELECT name, type_desc 
-FROM sys.triggers 
-WHERE parent_id = OBJECT_ID('Usuario');
 
  
