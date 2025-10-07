@@ -9,7 +9,7 @@ Estado actual del proyecto: En desarrollo, versión MVP en consola.
 
 Requerimientos para correrlo: Python versión 3.10 o superior (Puede usar de manera opcional un editor de texto o IDE como VSCode, Pycharm, etc).
 
-Instrucciones básicas de uso: Clone el repositorio a un IDE o descargue el archivo .RAR, descomprimalo, abra el terminal y navegue hasta la carpeta donde descomprimio el proyecto por ultimo debe ejecutar el archivo principal para probarlo.
+Instrucciones básicas de uso: Clone el repositorio a un IDE, descomprimalo, abra el terminal y navegue hasta la carpeta donde el proyecto, por ultimo debe ejecutar el archivo principal para probarlo.
 
 Roadmap: GUI, pruebas unitarias, integracion con AI de voz.
 
