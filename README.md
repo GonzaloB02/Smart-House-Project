@@ -1,4 +1,5 @@
 SmartHouse ABP
+
 Descripción del proyecto:
 SmartHouse es un sistema de automatización de dispositivos domésticos desarrollado en Python + SQL Server Management, diseñado para optimizar recursos, mejorar la eficiencia energética y facilitar la gestión del hogar.
 
