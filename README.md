@@ -1,16 +1,80 @@
-Nombre del proyecto: SmartHouse ABP.
+SmartHouse ABP
+Descripción del proyecto:
+SmartHouse es un sistema de automatización de dispositivos domésticos desarrollado en Python + SQL Server Management, diseñado para optimizar recursos, mejorar la eficiencia energética y facilitar la gestión del hogar.
 
-Descripción breve: 
-                  Problemática: Hoy en día las casas deben de manejarse de manera manual a través de una persona, quitándole tiempo el cual puede utilizar para algo más relevante, además, esto puede generar gastos de agua y eléctricos si esa persona se encuentra muy atareada con su trabajo o entornos sociales.
+El sistema permite a los usuarios:
+-	Registrar y autenticar usuarios con roles diferenciados (ADMIN, USUARIO, INVITADO).
+-	Gestionar dispositivos y automatizaciones mediante operaciones CRUD.
+-	Controlar accesos, estados y automatizaciones programadas de manera segura.
+Este proyecto corresponde a la Actividad Integradora ABP – Programación I – Base de Datos – Ética y Deontología de la Tecnicatura de Desarrollo de Software.
 
-                  Solución: El sistema SmartHouse busca apoyar las actividades diarias del cliente automatizando de manera inteligente los diferentes comportamientos de los electrodomésticos de la casa, además, busca ahorrar recursos como el agua y la electricidad. El sistema contará con un centro de monitorización, notificación, trazabilidad, administración y seguridad en base a roles el cual permitirá al usuario “Administrador” ser consciente de todos los procesos que suceden en el sistema SmartHouse. Esta jerarquía fue elegida para que el control del sistema sea limitado según los permisos otorgados a cada rol.
+Estado Actual
+Versión: MVP Funcional (consola).
+Estado: Finalizado y estable.
+Tecnologías Principales:
+-	Python 3.10+
+-	SQL Server Management 2020.
+-	PyODBC.
+-	Bcrypt.
 
-Estado actual del proyecto: En desarrollo, versión MVP en consola.
+ Instalación y Configuración:
+1.	Clonar el repositorio de GitHub.
+2.	Instalar dependencias (PyODBC, Bcrypt).
+3.	Configurar la Base de Datos: 
+-	 Abrir SQL Server 
+-	Ejecutar los scripts:
+DDL_SmartHouse.sql
+DML_SmartHouse.sql
+-	Asegurarse de crear la base de datos SmartHouse antes de ejecutar los inserts.
+4.	Configurar conexión:
+Editar el archivo “conexion_base_de_datos.py” con las credenciales locales del servidor SQL.
+5.	Ejecutar el sistema desde main.py
 
-Requerimientos para correrlo: Python versión 3.10 o superior (Puede usar de manera opcional un editor de texto o IDE como VSCode, Pycharm, etc).
+Roles de Usuario
+ADMIN
+Permisos: Gestionar usuarios, roles, dispositivos y automatizaciones.
+USUARIO
+Permisos: Consultar, agregar y modificar dispositivos o automatizaciones.
+INVITADO
+Permisos: Solo consultar.
 
-Instrucciones básicas de uso: Clone el repositorio a un IDE, descomprimalo, abra el terminal y navegue hasta la carpeta donde el proyecto, por ultimo debe ejecutar el archivo principal para probarlo.
+Funcionalidades Principales
+-	Registro e inicio de sesión con contraseñas hasheadas (bcrypt).
+-	Control de acceso por roles.
+-	CRUD completo para dispositivos y automatizaciones.
+-	Consultas SQL integradas (JOIN, subconsultas, relaciones).
+-	Validaciones de datos y manejo de errores de entrada.
+-	Baja lógica (activo = 0) para mantener integridad de datos.
 
-Roadmap: GUI, pruebas unitarias, integracion con AI de voz.
+Estructura del Proyecto
+dominio: Clases del modelo (Usuario, Rol, Dispositivo, Automatizacion).
+dao: Clases DAO (acceso a datos).
+conn: Conexión a base de datos SQL (PyODBC).
+interfaces: Menús y navegación principal del usuario.
+base_de_datos: Scripts DML y DDL de la estructura e inserciones a la base de datos SQL.
+docs: Diagramas DER, Relacional y de Clases.
+main.py: Punto de ejecución del programa.
+Informe_Impacto_Tecnologico.pdf: Informe detallado sobre el funcionamiento e impacto del programa en distintas áreas. 
 
-Autores/colaboradores: Gonzalo Barbuto.
+Pilares AWS-Well Architected Aplicados
+1.	Operational Excellence: Modularidad en capas, separación DAO, mantenimiento simple.
+2.	Security: Contraseñas cifradas, control de roles y validaciones de entrada.
+3.	Reliability: Claves foráneas, bajas lógicas y estructura estable ante fallos.
+4.	Performance Efficiency: Consultas SQL optimizadas y código escalable.
+5.	Cost Optimization: Ejecución local, modularidad, automatización del consumo energético.
+6.	Sustainability: Automatizaciones programadas orientadas al ahorro y la eficiencia.
+
+Documentación y Recursos
+Informe_Impacto_Tecnologico.pdf: Análisis ético, social y ambiental del sistema.
+docs: Diagramas de clases, DER y modelo relacional.
+ReadMe_Base_de_Datos.pdf: Instrucción de ejecución SQL.
+
+Roadmap Futuro
+-	Integración de interfaz gráfica (GUI).
+-	Implementación de TDD y pruebas unitarias.
+-	Monitoreo en tiempo real de dispositivos IoT.
+-	Reportes y análisis (KPI’s).
+
+Autor
+Gonzalo Barbuto.
+Tecnicatura de Desarrollo de Software.
