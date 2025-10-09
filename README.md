@@ -53,7 +53,7 @@ dao: Clases DAO (acceso a datos).
 conn: Conexión a base de datos SQL (PyODBC).
 interfaces: Menús y navegación principal del usuario.
 base_de_datos: Scripts DML y DDL de la estructura e inserciones a la base de datos SQL.
-docs: Diagramas DER, Relacional y de Clases.
+documentacion.pdf: Diagramas DER, Relacional y de Clases.
 main.py: Punto de ejecución del programa.
 Informe_Impacto_Tecnologico.pdf: Informe detallado sobre el funcionamiento e impacto del programa en distintas áreas. 
 
